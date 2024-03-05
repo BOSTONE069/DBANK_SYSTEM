@@ -26,6 +26,8 @@ document.querySelector("form").addEventListener("submit", async (event) => {
     await bitcoin_backend.withDraw(outputAmount);
   }
 
+  await bitcoin_backend.compoundInterest();
+
   const currentAmount = await bitcoin_backend.checkBalance();
   
   document.getElementById("value").innerText = Math.round(currentAmount * 100) / 100;
