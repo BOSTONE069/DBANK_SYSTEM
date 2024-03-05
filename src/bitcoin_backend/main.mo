@@ -42,11 +42,11 @@ actor Dbank{
 
     //function for caculating compound interest
     public func compoundInterest(){
-        let currentTime = Time.now();
-        let timeElapsedNS = currentTime - startTime;
-        let timeElapsedS = timeElapsedNS / 1000000000;
+        let currentTime = Time.now(); // current time is in seconds
+        let timeElapsedNS = currentTime - startTime; // elapsed time is in seconds
+        let timeElapsedS = timeElapsedNS / 1000000000; // convert to seconds
 
-        currentValue := currentValue * (1.01 ** Float.fromInt(timeElapsedS));
+        currentValue := currentValue * (1.01 ** Float.fromInt(timeElapsedS)); // compound interest value calculation
 
         startTime := currentTime;
 
