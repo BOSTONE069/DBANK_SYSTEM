@@ -2,7 +2,7 @@ import Debug "mo:base/Debug";
 import Int "mo:base/Int";
 
 actor Dbank{
-    stable var currentValue = 200; // This is the creation of a contant in motoko
+    stable var currentValue = 200; // This is the creation of a contant in motoko with stable to enhance persistance
     //currentValue := 400;
 
     let id = 5858585858585867895858; //This is a contant in motoko
@@ -30,7 +30,7 @@ actor Dbank{
         }
     };
 
-    //Function for checking the balance
+    //Function for checking the balance using the query keyword
     public query func checkBalance() : async Nat{
         return currentValue;
     };
