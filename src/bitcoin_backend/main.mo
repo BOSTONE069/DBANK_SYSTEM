@@ -4,10 +4,12 @@ import Time "mo:base/Time";
 import Float "mo:base/Float";
 
 actor Dbank{
-    stable var currentValue:Float = 200; // This is the creation of a contant in motoko with stable to enhance persistance
-    //currentValue := 400;
+    stable var currentValue:Float = 300; // This is the creation of a contant in motoko with stable to enhance persistance
+    currentValue := 300;
+    Debug.print(debug_show(currentValue));
 
     stable var startTime = Time.now();
+    startTime := Time.now();
     Debug.print(debug_show(startTime));
 
     let id = 5858585858585867895858; //This is a contant in motoko

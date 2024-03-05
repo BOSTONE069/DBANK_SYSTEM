@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>DBANK</title>
-  <link type="text/css" rel="stylesheet" href="main.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>DBANK</title>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+  </head>
 
-
-<body>
-  <div class="container">
-    <img src="bank.jpg" alt="Bank Logo" width="100">
-    <h1>Current Balance: $<span id="value">234</span></h1>
-    <div class="divider"></div>
-    <form action="">
-      <h2>Amount to Top Up</h2>
-      <input id="input-amount" type="number" stop="0.01" min = 0 name="topUp" value=""/>
-      <h2>Amount to WidthDraw</h2>
-      <input id="widthdrawal-amount" type="number" name="widthdraw" value=""/>
-      <input id="submit-btn" type="submit" value="Finalise Transaction"/>
-    </form>
-  </div>
-</body>
+  <body>
+    <div class="container">
+      <img src="bank.jpg" alt="Bank Logo" width="100" />
+      <h1>Current Balance: $<span id="value">234</span></h1>
+      <div class="divider"></div>
+      <form action="#">
+        <h2>Amount to Top Up</h2>
+        <input
+          id="input-amount"
+          type="number"
+          stop="0.01"
+          min="0"
+          name="topUp"
+          value=""
+        />
+        <h2>Amount to WidthDraw</h2>
+        <input
+          id="widthdrawal-amount"
+          type="number"
+          name="widthdraw"
+          value=""
+        />
+        <input id="submit-btn" type="submit" value="Finalise Transaction" />
+      </form>
+    </div>
+  </body>
 </html>
