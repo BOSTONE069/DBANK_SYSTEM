@@ -23,7 +23,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   // Get the input amount and output amount entered by the user
   const inputAmount = parseFloat(document.getElementById("input-amount").value);
   const outputAmount = parseFloat(
-    document.getElementById("widthdrawal-amount").value
+    document.getElementById("withdrawal-amount").value
   );
 
   // If the input amount is not empty, call the topUp function from the bitcoin backend
@@ -32,7 +32,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   }
 
   // If the withdrawal amount is not empty, call the withdraw function from the bitcoin backend
-  if (document.getElementById("widthdrawal-amount").value.length != 0) {
+  if (document.getElementById("withdrawal-amount").value.length != 0) {
     await bitcoin_backend.withDraw(outputAmount);
   }
 
@@ -48,6 +48,6 @@ document.querySelector("form").addEventListener("submit", async (event) => {
 
   // Reset the input fields and enable the submit button
   document.getElementById("input-amount").value = "";
-  document.getElementById("widthdrawal-amount").value = "";
+  document.getElementById("withdrawal-amount").value = "";
   button.removeAttribute("disabled");
 });
