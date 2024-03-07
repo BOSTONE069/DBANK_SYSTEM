@@ -4,11 +4,10 @@ import { bitcoin_backend } from "../../declarations/bitcoin_backend";
 // Execute this code when the window finishes loading
 window.addEventListener("load", async function () {
   // Retrieve the current balance from the bitcoin backend
-  const currentAmount = await bitcoin_backend.checkBalance();
 
-  // Update the value displayed on the webpage with the current balance
-  document.getElementById("value").innerText =
-    Math.round(currentAmount * 100) / 100;
+  update();
+
+  
 });
 
 // Add an event listener to the form for when it's submitted
@@ -39,15 +38,23 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   // Calculate compound interest for the user's account
   await bitcoin_backend.compoundInterest();
 
-  // Retrieve the updated current balance from the bitcoin backend
-  const currentAmount = await bitcoin_backend.checkBalance();
-
   // Update the value displayed on the webpage with the updated balance
-  document.getElementById("value").innerText =
-    Math.round(currentAmount * 100) / 100;
+  update();
 
   // Reset the input fields and enable the submit button
   document.getElementById("input-amount").value = "";
   document.getElementById("withdrawal-amount").value = "";
   button.removeAttribute("disabled");
 });
+
+async function update(){
+
+  // Retrieve the updated current balance from the bitcoin backend
+
+  const currentAmount = await bitcoin_backend.checkBalance();
+
+  // Update the value displayed on the webpage with the current balance
+  document.getElementById("value").innerText =
+    Math.round(currentAmount * 100) / 100;
+
+}
