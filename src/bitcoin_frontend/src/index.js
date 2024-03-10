@@ -47,14 +47,13 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   button.removeAttribute("disabled");
 });
 
+// This code defines an async function update that retrieves the current balance from a bitcoin backend
+// and updates the value displayed on a webpage with the current balance.
+
 async function update(){
-
   // Retrieve the updated current balance from the bitcoin backend
-
   const currentAmount = await bitcoin_backend.checkBalance();
-
   // Update the value displayed on the webpage with the current balance
   document.getElementById("value").innerText =
     Math.round(currentAmount * 100) / 100;
-
 }
