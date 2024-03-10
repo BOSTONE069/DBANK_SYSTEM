@@ -5,7 +5,7 @@ import Float "mo:base/Float";
 
 actor Dbank{
     stable var currentValue:Float = 300; // This is the creation of a contant in motoko with stable to enhance persistance
-    currentValue := 100;
+    currentValue := 200;
     Debug.print(debug_show(currentValue));
 
     stable var startTime = Time.now();
