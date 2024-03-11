@@ -4,7 +4,7 @@ Welcome to your new DBANK SYSTEM project and to the internet computer developmen
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
-To learn more before you start working with bitcoin, see the following documentation available online:
+To learn more before you start working with DBANK SYSTEM, see the following documentation available online:
 
 - [Quick Start](https://internetcomputer.org/docs/current/developer-docs/quickstart/hello10mins)
 - [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove)
